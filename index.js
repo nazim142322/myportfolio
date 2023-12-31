@@ -3,6 +3,7 @@ const ul = document.querySelector("nav>ul");
 const ham_child = hamburger.lastElementChild;
 const links = document.querySelectorAll(".link");
 
+//preloader
 const preloader = document.getElementById("preloader");
 window.addEventListener("load", function () {
   preloader.style.display = "none";
@@ -32,10 +33,9 @@ window.addEventListener("scroll", function (e) {
   if (window.scrollY > 200) {
     document.querySelector(".top").style.opacity = "1";
     this.document.querySelector(".logo>a").style.transform = "rotate(0deg)";
-
     console.log(this.document.querySelector(".logo>a"));
-  } else {      
-    this.document.querySelector(".logo>a").style.transform = "rotate(-2deg)";  
+  } else {
+    this.document.querySelector(".logo>a").style.transform = "rotate(-2deg)";
     document.querySelector(".top").style.opacity = "0";
   }
 });
