@@ -1,0 +1,485 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Serif", serif;
+  /* border: 1px solid red; */
+}
+html {
+  font-size: 62.5%;
+  /* 1rem = 10px */
+}
+body {
+  background-color: #f4f4f4;
+  color: #333;
+  scroll-behavior: smooth;
+}
+section {
+  scroll-margin: 50px;
+}
+#get-in-touch {
+  scroll-margin: -10rem;
+}
+#hero {
+  scroll-margin: 100rem;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+p {
+  font-family: "Noto Serif", serif;
+  font-size: 1.7rem;
+  line-height: 1.5;
+  /* letter-spacing: 0.1rem; */
+  font-weight: 300;
+  /* color: var(--para-color); */
+}
+a {
+  text-decoration: none;
+}
+/*-----------layout---------*/
+.container {
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 1.4rem 1.4rem;
+}
+/*---------- theme--------- */
+:root {
+  --main-color: #0062ff;
+  --supporting-color: #ebf3fe;
+  --font-color: #424242;
+  --bg-color: #ffffff;
+  --heading-color: #000a19;
+  --para-color: #504e4d;
+  --white-color: #ffffff;
+  --hover-bg-color: #003b99;
+  --hero-heading-color: #003b99;
+  --box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+/*----------- navbar------- */
+header {
+  /* box-shadow: 0px 5px 4px rgba(221, 221, 221, 0.6); */
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  /* background-color: white; */
+  background-color: #f4f4f4;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .logo > a {
+  border: 0.3rem solid #333333;
+  padding: 0.3rem;
+  display: inline-block;
+  transform: rotate(-2deg);
+  transition: 0.5s linear;
+}
+nav .logo a h1 {
+  text-align: start;
+  overflow: hidden;
+}
+nav .logo h1 .port {
+  background-color: #649cff;
+  color: white;
+  font-size: 2rem;
+  padding: 0rem 2rem;
+  display: inline-block;
+  /* transform: rotate(45deg); */
+}
+nav .logo h1 .folio {
+  color: #333;
+  font-size: 2rem;
+  padding: 0rem 2rem 0rem 0rem;
+  display: inline-block;
+}
+nav > ul {
+  display: flex;
+  gap: 3rem;
+  list-style-type: none;
+  align-items: center;
+  & li a {
+    color: var(--heading-color);
+    font-weight: 600;
+    font-size: 1.6rem;
+    display: block;
+    position: relative;
+  }
+}
+nav > ul > li > a::after {
+  content: "";
+  width: 0;
+  position: absolute;
+  bottom: -0.5rem;
+  left: -0.1rem;
+  border-bottom: 0.2rem solid var(--main-color);
+  transition: 0.5s;
+  border-radius: 8px;
+  transition: width 0.5s linear;
+  /* content: "";
+  width: 0;
+  height: 0.2rem;
+  background: var(--main-color);
+  position: absolute;
+  bottom: -0.2rem;
+  left: 0;
+  transition: width 0.5s;
+  border-radius: 6px; */
+}
+nav > ul > li:not(:last-child) > a:hover::after {
+  width: 105%;
+}
+nav > ul > li:last-child > a {
+  /* background-color: var(--main-color); */
+  background-image: linear-gradient(
+    to top right,
+    #3d86fa,
+    #4484fb,
+    #679eff,
+    #b3d2ff,
+    #ebf3fe
+  );
+  color: var(--white-color);
+  padding: 0.5rem 1.5rem;
+  display: inline-block;
+  transition: 0.5s ease;
+}
+/*-------- hero section--------- */
+main {
+  background-image: linear-gradient(
+    to top right,
+    #3d86fa,
+    #4484fb,
+    #679eff,
+    #b3d2ff,
+    #ebf3fe
+  );
+  min-height: calc(100vh - 67px);
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+.hero-section {
+}
+.grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: center;
+}
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  /* gap: 1.4rem; */
+  /* padding: 1rem; */
+  /* border: 1px solid white; */
+}
+.hero-content .hero-heading {
+  font-size: 3.8rem;
+  font-weight: 700;
+  color: var(--hero-heading-color);
+}
+.hero-heading .hi {
+  color: white;
+  font-size: 5rem;
+}
+
+.hero-content .frontend-dev {
+  color: var(--hero-heading-color);
+  font-size: 4rem;
+  text-align: left;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  /*border-right: .15em solid orange;   The typwriter cursor */
+  white-space: nowrap;
+  animation: typing 8s infinite linear 1s;
+}
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.hero-content .hero-para {
+  color: var(--white-color);
+  margin-block: 2rem;
+}
+.hero-section .hero-btn {
+  /* background-color: var(--main-color); */
+  background-color: #639bfe;
+  border: none;
+  padding: 1.2rem 3.2rem;
+  border-radius: 6px;
+  font-size: 1.8rem;
+  letter-spacing: 0.1rem;
+  display: inline-block;
+  transition: 0.5s ease;
+  color: var(--white-color);
+}
+.hero-section .hero-btn:hover {
+  background-color: var(--hover-bg-color);
+  cursor: pointer;
+  box-shadow: var(--box-shadow);
+}
+.hero-image {
+  text-align: center;
+}
+.hero-image img {
+  transform: scaleX(-1);
+  display: inline-block;
+  width: 100%;
+  max-width: 48rem;
+}
+/* ------------section-skills-------------- */
+.section-skills {
+  max-width: 130rem;
+  margin: 0px auto;
+  padding: 5rem 1.4rem;
+}
+.section-skills > .skill-content {
+  text-align: center;
+}
+.section-skills > .skill-content > h1 {
+  margin-block: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+  font-size: 3.2rem;
+  font-weight: 400;
+  /* text-decoration: underline #649bfe;
+  text-underline-offset: 0.5rem; */
+}
+.section-skills > .skill-content > h1 i {
+  color: #333;
+}
+.section-skills > .skill-content > p {
+  margin-block: 4rem;
+}
+.skill-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-block: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+.skill-container > div {
+  width: 10rem;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  border-radius: 0.6rem;
+  transition: 0.5s linear;
+  background-color: white;
+}
+.skill-container > div:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+.skill-container > div img {
+  max-width: 70px;
+  display: block;
+}
+/* ------------section-projects------------ */
+#projects {
+  /* padding: 5rem 1.4rem;
+  max-width: 130rem auto; */
+  /* background-image: url("project-bg.png"); */
+  background-color: #e5eefa;
+}
+.section-projects {
+}
+#projects .project-content {
+}
+#projects .project-content > h1 {
+  margin-block: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+  font-size: 3.2rem;
+  font-weight: 400;
+  /* text-decoration: underline #649bfe; */
+  text-underline-offset: 1rem;
+}
+#projects .project-content > p {
+  margin-block: 4rem;
+  font-size: 1.7rem;
+  line-height: 1.5;
+}
+.card-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-block: 2rem;
+}
+/* .card-container > a {
+} */
+.flex-card {
+  width: 30rem;
+  height: 17rem;
+  background-image: var(--bgimg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.flex-card-content {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: 1s ease;
+  /* display: grid;
+  place-items: center; */
+  /* border: 1px solid red; */
+}
+.flex-card-content:hover {
+  opacity: 1;
+}
+.card-container > a {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+}
+
+/* get-in-touch */
+.get-in-touch {
+  min-height: calc(100vh - 5.8rem);
+  display: grid;
+  place-items: center;
+  padding: 0 1.4rem;
+}
+.get-in-touch-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.get-in-touch-content > h1 {
+  font-size: 4rem;
+  font-weight: 700;
+
+  text-align: center;
+}
+.social-media-links {
+  display: flex;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.phone-email {
+  display: flex;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.connect > a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 2.2rem;
+  color: #333;
+}
+footer {
+  text-align: center;
+  padding: 1.2rem;
+  background-color: #333;
+  color: #fff;
+}
+.top {
+  height: 4rem;
+  width: 4rem;
+  background: #639bff;
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 2rem;
+  cursor: pointer;
+  opacity: 0;
+  transition: 1.5s ease;
+}
+.top i {
+  color: white;
+}
+.hamburger {
+  font-size: 2.2rem;
+  font-weight: 500;
+  display: none;
+  cursor: pointer;
+}
+
+@media (max-width: 940px) {
+  .hero-section {
+    grid-template-columns: 100%;
+    justify-content: center;
+  }
+  .hero-section .hero-image {
+    order: -1; /* This will move the column to the beginning */
+  }
+  .hero-heading > span {
+    color: white;
+    font-size: 5rem;
+  }
+  .hero-heading,
+  .frontend-dev {
+    font-size: 3rem !important;
+  }
+  .hamburger {
+    display: flex;
+    align-items: center;
+  }
+  .hamburger span {
+    font-size: 1.6rem;
+    margin-inline: 0.5rem;
+    font-weight: 500;
+  }
+  .hamburger i {
+  }
+  header > nav > ul {
+    display: none;
+  }
+  .ham_active {
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+    align-items: start;
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    width: 90%;
+    transform: translateX(-50%);
+    background-color: #f4f4f4;
+    border: 1px solid #c2c0c0;
+    border-radius: 1.2rem;
+    text-align: start;
+    padding: 2rem;
+  }
+}
+#preloader {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background-color: white;
+  z-index: 100;
+  background-image: url("images/preloader.gif");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 15%;
+}
