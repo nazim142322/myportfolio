@@ -299,7 +299,6 @@ main {
   background-color: #e5eefa;
 }
 #projects .project-content > h1 {
-  border: 1px solid red;
   margin-block: 2rem;
   text-align: center;
   font-size: 3.2rem;
