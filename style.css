@@ -429,13 +429,20 @@ footer {
 .top i {
   color: white;
 }
+.top p {
+  position: absolute;
+  bottom: 8rem;
+  width: 10rem;
+  transform: rotate(-90deg);
+  font-size: 1.4rem;
+  color: #000;
+}
 .hamburger {
   font-size: 2.2rem;
   font-weight: 500;
   display: none;
   cursor: pointer;
 }
-
 @media (max-width: 940px) {
   .hero-section {
     grid-template-columns: 100%;
