@@ -135,15 +135,15 @@ nav > ul > li:not(:last-child) > a:hover::after {
   width: 105%;
 }
 nav > ul > li:last-child > a {
-  /* background-color: var(--main-color); */
+  border-radius: 0.2rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   background-image: linear-gradient(
-    to top right,
-    #3d86fa,
-    #4484fb,
-    #679eff,
-    #b3d2ff,
-    #ebf3fe
+    to right,
+    rgb(236, 72, 153),
+    rgb(239, 68, 68),
+    rgb(234, 179, 8)
   );
+
   color: var(--white-color);
   padding: 0.5rem 1.5rem;
   display: inline-block;
