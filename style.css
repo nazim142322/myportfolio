@@ -9,11 +9,11 @@
 html {
   font-size: 62.5%;
   /* 1rem = 10px */
+  scroll-behavior: smooth;
 }
 body {
   background-color: #f4f4f4;
   color: #333;
-  scroll-behavior: smooth;
 }
 section {
   scroll-margin: 50px;
@@ -164,8 +164,7 @@ main {
   place-items: center;
   position: relative;
 }
-.hero-section {
-}
+
 .grid {
   display: grid;
   grid-template-columns: 50% 50%;
@@ -212,16 +211,20 @@ main {
   margin-block: 2rem;
 }
 .hero-section .hero-btn {
-  /* background-color: var(--main-color); */
-  background-color: #639bfe;
   border: none;
-  padding: 1.2rem 3.2rem;
+  padding: 1rem 3rem;
   border-radius: 6px;
   font-size: 1.8rem;
   letter-spacing: 0.1rem;
   display: inline-block;
   transition: 0.5s ease;
   color: var(--white-color);
+  background-image: linear-gradient(
+    to right,
+    rgb(134, 239, 172),
+    rgb(59, 130, 246),
+    rgb(147, 51, 234)
+  );
 }
 .hero-section .hero-btn:hover {
   background-color: var(--hover-bg-color);
@@ -338,6 +341,11 @@ main {
   display: grid;
   place-items: center;
   position: relative;
+}
+.flex-card-content i {
+  font-size: 2rem;
+  color: white;
+  font-weight: 600;
 }
 .flex-card-content p {
   color: white;
