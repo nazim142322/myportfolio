@@ -296,9 +296,6 @@ main {
 }
 /* ------------section-projects------------ */
 #projects {
-  /* padding: 5rem 1.4rem;
-  max-width: 130rem auto; */
-  /* background-image: url("project-bg.png"); */
   background-color: #e5eefa;
 }
 #projects .project-content > h1 {
