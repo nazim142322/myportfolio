@@ -184,12 +184,14 @@ main {
 }
 .hero-heading .hi {
   color: white;
-  font-size: 4.5rem;
+  /* font-size: 4.5rem; */
+  font-size: 2.5rem !important;
 }
 
 .hero-content .frontend-dev {
   color: var(--hero-heading-color);
-  font-size: 3.5rem;
+  /* font-size: 3.5rem; */
+  font-size: 2.5rem !important;
   text-align: left;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   /*border-right: .15em solid orange;   The typwriter cursor */
@@ -264,7 +266,7 @@ main {
 }
 .section-skills > .skill-content > p {
   margin-block: 4rem;
-  color:black;
+  color: black;
 }
 .skill-container {
   max-width: 800px;
